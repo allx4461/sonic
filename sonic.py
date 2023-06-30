@@ -157,16 +157,19 @@ def start_game():
 
 
         
-
+end=False
 
 while game:
-    start_game()
+    
+    while not end:
+        start_game()
+        end=True
     
     for e in event.get():
         if e.type == QUIT:
             game=False
 
     #window.exec()
-
+    display.update()
     
     
